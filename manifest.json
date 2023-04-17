@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "AI Tweet Generator",
+    "version": "1.0",
+    "description": "Generates awesome tweets for the page contents.",
+    "icons": {
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "AI Tweet Generator"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    },
+    "permissions":[
+        "storage",
+        "contextMenus",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+          "resources": ["popup.html"],
+          "matches": ["<all_urls>"]
+        }
+    ]
+  }
+  
